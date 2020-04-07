@@ -1,0 +1,67 @@
+<div class="review-wrapper">
+  <div class="container-fluid box-wrapper">
+    <div class="row content-wrapper">
+
+      <div class="col-md-2 box-left p-0">
+
+      </div>
+      <div class="col-md-10 box-right">
+        <span class="title">Reviews</span>
+        <span class="link" (click)="openReviewModal($event)">Write a review on this product</span>
+      </div>
+    </div>
+
+    <div class="row content-wrapper">
+      <div class="col-md-2 box-left p-0">
+        <img src="../../../assets/reviewer1.png" />
+        <div>Shaun White</div>
+      </div>
+      <div class="col-md-10 box-right">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet erat et turpis ultricies interdum vitae
+          ut diam. Proin condimentum mi vitae dapibus interdum. Orci varius natoque penatibus et magnis dis parturient
+        </p>
+      </div>
+    </div>
+    <div class="row content-wrapper">
+      <div class="col-md-2 box-left p-0">
+        <img src="../../../assets/reviewer2.png" />
+        <div>Jenniw Loren</div>
+      </div>
+      <div class="col-md-10 box-right">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet erat et turpis ultricies interdum vitae
+          ut diam. Proin condimentum mi vitae dapibus interdum. Orci varius natoque penatibus et magnis dis parturient
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="review-modal" *ngIf="showModal" [@slideInOut]>
+    <div class="review-modal">
+      <div class="row">
+        <span class="col-md-7">Please Rate the Tough Mojo Jacket</span>
+        <ngb-rating [(rate)]="currentRate" [max]="5" class="col-md-5 rates">
+          <ng-template let-fill="fill" let-index="index">
+            <span class="star" [class.filled]="fill === 100">&#9733;</span>
+          </ng-template>
+        </ngb-rating>
+      </div>
+      <div class="row mt-2">
+        <span class="col-md-3">Review Title</span>
+        <input type="text" class="col-md-8" />
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <textarea placeholder="- Write your review here -"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-right">
+          <button class="btn-submit" (click)="showModal = false;">Submit Review</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

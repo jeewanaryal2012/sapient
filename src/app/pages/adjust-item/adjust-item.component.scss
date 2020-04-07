@@ -1,0 +1,29 @@
+.adjust-item-wrapper {
+  font-family: 'Raleway-Regular';
+  background-image: url('../../../assets/topsection-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  .content-wrapper {
+    height: 100vh;
+  }
+  .content-wrapper {
+    margin: 0px 16%;
+    background-color: rgba(0,0,0,0.2);
+    .box-left {
+      img {
+        width: 60%;
+        padding: 40px;
+      }
+    }
+    .box-right {
+      img {
+        width: 250px;
+        margin-top: 50px;
+        margin-left: -90px;
+      }
+    }
+  }
+
+}

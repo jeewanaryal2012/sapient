@@ -1,0 +1,27 @@
+.adjust-item-wrapper {
+  font-family: 'Raleway-Light';
+  background-color: rgba(117, 118, 119, 1);
+  color: #ffffff;
+  // background-image: url('../../../assets/topsection-background.png');
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  min-height: 400px;
+  .content-wrapper {
+    height: 100vh;
+  }
+  .content-wrapper {
+    margin: 0px 16%;
+    //background-color: rgba(0,0,0,0.2);
+    .box-left {
+      img {
+        margin-top: 20px;
+        width: 80%;
+      }
+    }
+    .box-right {
+      margin-top: 20px;
+    }
+  }
+
+}

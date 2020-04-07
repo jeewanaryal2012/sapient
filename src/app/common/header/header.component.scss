@@ -1,0 +1,37 @@
+.header-wrapper {
+  //padding: 20px 20% 10px 20%;
+  padding-top: 20px;
+  min-height: 6rem;
+  background-color: #000000;
+  .box-wrapper {
+    margin: 0px auto;
+    width: 62%;
+  }
+  .header-logo {
+    img {
+      width: 10rem;
+    }
+  }
+  .search-wrapper {
+    input {
+      margin-top: 10px;
+      height: 20px;
+      width: 190px;
+      margin-left: 4px;
+      font-size: 0.4rem;
+      padding-left: 4px;
+    }
+    img {
+      margin-left: -16px;
+    }
+  }
+  .action-links {
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 0.6rem;
+    span {
+      margin: 4px;
+      float: left;
+    }
+  }
+}

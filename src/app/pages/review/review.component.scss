@@ -1,0 +1,71 @@
+
+.review-wrapper {
+  font-family: 'Raleway-Light';
+  background-color: rgba(3, 37, 62, 1);
+  color: #ffffff;
+  min-height: 400px;
+  margin-top: -20px;
+  .content-wrapper {
+    margin: 20px 16%;
+    .box-right {
+      margin-top: 20px;
+      .title {
+        font-size: 2rem;
+      }
+      .link {
+        margin-left: 40px;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #review-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .review-modal {
+      color: #000000;
+      width: 50%;
+      border: 1px solid black;
+      background-color: #ffffff;
+      padding: 15px;
+      .rates {
+        margin-left: -50px;
+        margin-top: -8px;
+        outline: none;
+      }
+      .star {
+        font-size: 1.5rem;
+        color: rgb(222, 228, 227);
+      }
+      .filled {
+        color: rgba(56, 135, 148, 1);
+      }
+      textarea {
+        width: 100%;
+        height: 160px;
+        border: 1px solid #c0c0c0;
+        padding-left: 10px;
+      }
+      .btn-submit {
+        background-color: rgba(56, 135, 148, 1);
+        color: #ffffff;
+        border: rgba (71, 111, 122, 1);
+        font-size: 0.8rem;
+        padding: 8px 20px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+}
+
+

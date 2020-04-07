@@ -1,0 +1,40 @@
+<div class="menu-wrapper">
+  <div class="container-fluid box-wrapper">
+    <div class="row">
+      <div class="menu">
+        <ul class="menu-list">
+          <li>
+            <span>Camping</span>
+            <i class="fas fa-angle-down"></i>
+          </li>
+          <li (click)="listClicked($event)">
+            <span>Clothing</span>
+            <i class="fas fa-angle-down"></i>
+            <ul class="sub-list-clothing" *ngIf="openSubList === true" [@inOutAnimation]>
+              <li>Outwear</li>
+              <li>Hiking Shoes / Boots</li>
+              <li>Gloves</li>
+              <li>Hats</li>
+            </ul>
+          </li>
+          <li>
+            <span>Fishing</span>
+            <i class="fas fa-angle-down"></i>
+          </li>
+          <li>
+            <span>Hiking</span>
+            <i class="fas fa-angle-down"></i>
+          </li>
+          <li>
+            <span>Biking</span>
+            <i class="fas fa-angle-down"></i>
+            <span class="separator"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" *ngIf="openSubList === true" (click)="openSubList = false" [@inOutAnimation]>
+</div>
