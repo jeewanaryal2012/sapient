@@ -37,6 +37,20 @@
             </ul>
           </div>
         </div>
+        <div class="row row-2">
+          <div class="col-md-6">
+            <span class="caret" (click)="quantityDown($event)">
+              <i class="fas fa-caret-down"></i>
+            </span>
+            <span><input id="quantity" type="text" [value]="qty" readonly /></span>
+            <span class="caret" (click)="quantityUp($event)">
+              <i class="fas fa-caret-up"></i>
+            </span>
+          </div>
+          <div class="col-md-6">
+            <button class="btn-submit">Submit Review</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

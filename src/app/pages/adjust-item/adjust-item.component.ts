@@ -31,6 +31,8 @@ import { trigger, style, animate, transition } from '@angular/animations';
 })
 export class AdjustItemComponent implements OnInit {
   openSubList = '';
+  qty = 1;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -41,6 +43,13 @@ export class AdjustItemComponent implements OnInit {
   }
   selectColor(e, type) {
     this.openSubList = type;
+  }
+
+  quantityUp(e) {
+    this.qty = this.qty >= 10 ? this.qty : this.qty + 1;
+  }
+  quantityDown(e) {
+    this.qty = this.qty <= 1 ? 1 : this.qty - 1;
   }
 
 }
