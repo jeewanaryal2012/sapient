@@ -31,14 +31,14 @@ import { trigger, style, animate, transition } from '@angular/animations';
 })
 export class MenuComponent implements OnInit {
 
-  openSubList = false;
+  openSubList = '';
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  listClicked(e) {
-    this.openSubList = true;
+  listClicked(e, type) {
+    this.openSubList = type;
   }
 
 }

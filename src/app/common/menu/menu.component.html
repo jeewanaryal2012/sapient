@@ -3,32 +3,56 @@
     <div class="row">
       <div class="menu">
         <ul class="menu-list">
-          <li>
+          <li (click)="listClicked($event, 'camping')">
             <span>Camping</span>
             <i class="fas fa-angle-down"></i>
+            <ul class="sub-list-clothing" *ngIf="openSubList === 'camping'" [@inOutAnimation]>
+              <li>Outwear 1</li>
+              <li>Hiking Shoes / Boots 1</li>
+              <li>Gloves 1</li>
+              <li>Hats 1</li>
+            </ul>
           </li>
-          <li (click)="listClicked($event)">
+          <li (click)="listClicked($event, 'clothing')">
             <span>Clothing</span>
             <i class="fas fa-angle-down"></i>
-            <ul class="sub-list-clothing" *ngIf="openSubList === true" [@inOutAnimation]>
+            <ul class="sub-list-clothing" *ngIf="openSubList === 'clothing'" [@inOutAnimation]>
               <li>Outwear</li>
               <li>Hiking Shoes / Boots</li>
               <li>Gloves</li>
               <li>Hats</li>
             </ul>
           </li>
-          <li>
+          <li (click)="listClicked($event, 'fishing')">
             <span>Fishing</span>
             <i class="fas fa-angle-down"></i>
+            <ul class="sub-list-clothing" *ngIf="openSubList === 'fishing'" [@inOutAnimation]>
+              <li>Outwear 2</li>
+              <li>Hiking Shoes / Boots 2</li>
+              <li>Gloves 2</li>
+              <li>Hats 2</li>
+            </ul>
           </li>
-          <li>
+          <li (click)="listClicked($event, 'hiking')">
             <span>Hiking</span>
             <i class="fas fa-angle-down"></i>
+            <ul class="sub-list-clothing" *ngIf="openSubList === 'hiking'" [@inOutAnimation]>
+              <li>Outwear 3</li>
+              <li>Hiking Shoes / Boots 3</li>
+              <li>Gloves 3</li>
+              <li>Hats 3</li>
+            </ul>
           </li>
-          <li>
+          <li (click)="listClicked($event, 'biking')">
             <span>Biking</span>
             <i class="fas fa-angle-down"></i>
             <span class="separator"></span>
+            <ul class="sub-list-clothing" *ngIf="openSubList === 'biking'" [@inOutAnimation]>
+              <li>Outwear 4</li>
+              <li>Hiking Shoes / Boots 4</li>
+              <li>Gloves 4</li>
+              <li>Hats 4</li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -36,5 +60,5 @@
   </div>
 </div>
 
-<div class="overlay" *ngIf="openSubList === true" (click)="openSubList = false" [@inOutAnimation]>
+<div class="overlay" *ngIf="openSubList.length > 0" (click)="openSubList = ''" [@inOutAnimation]>
 </div>
